@@ -24,7 +24,7 @@ public class ClaseMainHashMap {
         System.out.println("Ingrese el DNI de la que persona desea eliminar de la lista");
         Integer varElegido = leer.nextInt(); 
         
-        nuevaEjecucion.buscarElimar(varElegido);//LLAMO AL METODO y envio a quien quiero eliminar. "OJO CON ELIMINARME A MI JAJAJ"
+        nuevaEjecucion.buscarEliminar(varElegido);//LLAMO AL METODO y envio a quien quiero eliminar. "OJO CON ELIMINARME A MI JAJAJ"
         nuevaEjecucion.imprimirTodos(); // Invoco al metodo de imprimir , para ver que se fue.....
 
     }

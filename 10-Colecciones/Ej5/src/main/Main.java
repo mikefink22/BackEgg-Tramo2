@@ -16,7 +16,8 @@ public class Main {
         ps.cargarPaises();
         ps.mostrarPaises();
         ps.eliminarPais();
-        System.out.println("");
+        System.out.println("------------------");
+        System.out.println("Lista actualizada:");
         ps.mostrarPaises();
     }
     

@@ -22,13 +22,11 @@ import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
 
-/**
- *
- * @author Usuario
- */
+
 public class PaisesServicio {
     Scanner leer = new Scanner(System.in).useDelimiter("\n");
     Set<String> conjuntoPaises = new TreeSet();
+    //ArrayList<String> paises = new ArrayList();
     
     public void cargarPaises (){
         
@@ -41,7 +39,7 @@ public class PaisesServicio {
     }
     
     public void mostrarPaises(){
-        conjuntoPaises.forEach((cp) -> {
+            conjuntoPaises.forEach((cp) -> {
             System.out.println(cp);
         });
     }

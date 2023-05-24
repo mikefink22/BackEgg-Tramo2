@@ -8,6 +8,8 @@ package service;
 
 import entidad.Pelicula;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class ServicioPelicula {
@@ -22,7 +24,7 @@ public class ServicioPelicula {
         System.out.println("Ingrese el nombre del director");
         String director = leer.next();
         System.out.println("Ingrese la duración en horas:");
-        int duración = leer.nextInt();
+        Integer duración = leer.nextInt();
         Pelicula pelicula = new Pelicula(título, director, duración);
         peliculas.add(pelicula);
         do {
@@ -67,8 +69,14 @@ public class ServicioPelicula {
             }
         }
     }
-    //Ordenar las películas de acuerdo a su duración (de mayor a menor) y mostrarlo en pantalla.
-    public void ordenPeliMayAMen(ArrayList<Pelicula> peliculas){
-    
+    //Ordenar las películas.
+    //Creamos los comparadores en la clase Comparadores.
+    public void ordenarPor(ArrayList<Pelicula> pelicula, Comparator c){
+        Collections.sort(pelicula,c);
+            for (Pelicula pelicula1 : pelicula) {
+                System.out.println(pelicula1);
+        }
+        }
     }
-}
+   
+

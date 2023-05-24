@@ -43,7 +43,7 @@ public class PersonaServicioHashMap {
    }
     
 
-    public void buscarElimar(Integer varElegido) {
+    public void buscarEliminar(Integer varElegido) {
          nuevoMapa.remove(varElegido);    
     }
     

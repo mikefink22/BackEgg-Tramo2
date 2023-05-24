@@ -7,11 +7,11 @@ package entidad;
 public class Pelicula {
     private String título;
     private String director;
-    private int duración;
+    private Integer duración;
     
     public Pelicula(){}
 
-    public Pelicula(String título, String director, int duración) {
+    public Pelicula(String título, String director, Integer duración) {
         this.título = título;
         this.director = director;
         this.duración = duración;
@@ -33,11 +33,11 @@ public class Pelicula {
         this.director = director;
     }
 
-    public int getDuración() {
+    public Integer getDuración() {
         return duración;
     }
 
-    public void setDuración(int duración) {
+    public void setDuración(Integer duración) {
         this.duración = duración;
     }
     @ Override
