@@ -1,0 +1,43 @@
+Scanner leer = new Scanner (System.in);
+int size;
+
+System.out.println("Ingrese el tamaño del vector: ");
+size = leer.nextInt();    
+
+int[] vector = new int[size];
+llenaVector(vector);
+imprimeVector(vector);
+
+System.out.println("Ingrese el número que desea buscar: ");
+int numeroBuscado = leer.nextInt();        
+
+// Demostración con enteros
+int posicionDeElementoBuscado = buscaNumero(vector, numeroBuscado);
+if (posicionDeElementoBuscado == -1) {
+    System.out.println("El elemento NO existe en el arreglo");
+} else {
+    System.out.println("El elemento existe en la posición: " + posicionDeElementoBuscado);
+}
+
+public static int buscaNumero(int[] vector, int numeroBuscado) {
+    for (int i = 0; i < vector.length; i++) {
+        if (vector[i] == numeroBuscado) {
+            return i;
+        }
+    }
+    return -1;
+}
+
+public static int[] llenaVector(int[] vector){
+    System.out.println("LLenando vector....");
+    for(int i=0;i<vector.length;i++){
+        vector[i] = new Random().nextInt(40);
+    }
+    return vector;
+}
+public static void imprimeVector(int[] vector){
+    System.out.println("Imprimiendo vector....");
+    for(int i=0;i<vector.length;i++){
+        System.out.print(String.valueOf(vector[i])+" ");
+    }
+}
