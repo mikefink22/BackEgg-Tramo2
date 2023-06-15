@@ -112,6 +112,19 @@ Sin embargo, se pretende diferenciar la información de algunos tipos de barcos 
 
         return b1;
     }
+    /*
+    Un alquiler se calcula multiplicando el número de días de ocupación (calculado con la fecha de
+alquiler y devolución), por un valor módulo de cada barco (obtenido simplemente
+multiplicando por 10 los metros de eslora).
+En los barcos de tipo especial el módulo de cada barco se calcula sacando el módulo normal y
+sumándole el atributo particular de cada barco. En los veleros se suma el número de mástiles,
+en los barcos a motor se le suma la potencia en CV y en los yates se suma la potencia en CV y
+el número de camarotes.
+    */
+    public void calcularAmarre(Amarre a){
+        
+        long diferenciaDias = ChronoUnit.DAYS.between(a.fechaAlquiler, fechaDevolucion)
+    }
 //        System.out.println("Ingrese la fecha de vencimiento del carnet (dd/mm/yyyy)");
 //        String fecha= input.next();
 //        int dia = Integer.parseInt(fecha.substring(0,2));
