@@ -1,0 +1,23 @@
+https://www.freecodecamp.org/espanol/news/subir-a-github-lo-suficientemente-simple-para-poetas/
+simbolo numeral: alt+35
+barra invertida: alt+92
+-----
+# pegar texto:
+shitf+Insert o botón del medio del mouse
+# consultar posición
+pwd
+# cambiar de disco
+cd e:\ 
+# acceder a la carpeta Miguel
+cd Miguel
+# bajar de directorio
+cd ..
+# consultar contenido en directorio
+ls
+# limpiar pantalla
+clear
+# salir
+exit
+#
+git commit -m "mensaje"
+El mensaje del commit ayuda a entender el propósito y el contexto de cada cambio. También facilita la colaboración y la revisión del código entre los desarrolladores.
