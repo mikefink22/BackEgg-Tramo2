@@ -20,6 +20,7 @@ precio final de su alquiler.
  */
 package service;
 
+import entity.Amarre;
 import entity.Barco;
 import entity.BarcoMotor;
 import entity.Velero;
@@ -45,9 +46,14 @@ amarre y el barco que lo ocupará.
         System.out.println("Ingrese documento");
         int doc = input.nextInt();
         System.out.println("Fecha de amarre");
-        Date fechaAmarre = fecha();
+        Date fechaAlquiler = fecha();
         System.out.println("Fecha devolucion");
         Date fechaDevolucion = fecha();
+        System.out.println("Ingrese posicion del amarre");
+        int posicion= input.nextInt();
+        System.out.println("Cargando barco");
+        Barco barco= crearBarco();
+        Amarre amarre = new Amarre(nombre, doc, fechaAlquiler, fechaDevolucion, posicion, barco);
 
     }
 
@@ -89,13 +95,19 @@ Sin embargo, se pretende diferenciar la información de algunos tipos de barcos 
                 b1 = new Velero(mast,mat,esl,fab);
                 break;
             case "barco a motor":
-                b1 = new BarcoMotor();
-                
+                System.out.println("Ingrese potencia en CV");
+                int pote= input.nextInt();
+                b1 = new BarcoMotor(pote,mat,esl,fab);               
                 break;
             case "yate":
-                b1= new Yate();
+                System.out.println("Ingrese potencia en CV");
+                int pote2 = input.nextInt();
+                System.out.println("Ingrese cantidad de camarotes");
+                int camar= input.nextInt();
+                b1= new Yate(camar,pote2,mat,esl,fab);
+                
                 break;
-            default: b1= new Barco();
+            default: b1= new Barco(mat,esl,fab);
         }
 
         return b1;
